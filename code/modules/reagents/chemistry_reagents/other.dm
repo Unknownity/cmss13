@@ -572,6 +572,7 @@
 	burncolormod = 2
 	chemclass = CHEM_CLASS_RARE
 	custom_metabolism = AMOUNT_PER_TIME(1, 200 SECONDS)
+	flags = REAGENT_NO_GENERATION
 
 /datum/reagent/nanites
 	name = "Nanomachines"
