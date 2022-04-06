@@ -437,17 +437,10 @@
 	var/slots_used = LAZYLEN(creation_template)
 	creation_cost += slots_used * 3 - 6 //3 cost for each slot after the 2nd
 	min_creation_cost += slots_used - 2
-	var/has_combustibles = FALSE
 	for(var/datum/chem_property/P in creation_template)
 		creation_cost += max(abs(P.value), 1) * P.level
 		if(P.level > 5) // a penalty is added at each level above 5 (+1 at 6, +2 at 7, +4 at 8, +5 at 9, +7 at 10)
 			creation_cost += P.level - 6 + n_ceil((P.level - 5) / 2)
-		if(P.category & PROPERTY_TYPE_COMBUSTIBLE)
-			has_combustibles = TRUE
-	if(has_combustibles) //negative values are not applied in templates that use combustibles unless those properties are also of the combustible category
-		for(var/datum/chem_property/P in creation_template)
-			if(P.value < 0 && !(P.category & PROPERTY_TYPE_COMBUSTIBLE))
-				creation_cost += P.value * P.level * -1 //revert
 	creation_cost += ((new_od_level - 10) / 5) * 3 //3 cost for every 5 units above 10
 	for(var/rarity in creation_complexity)
 		switch(rarity)
