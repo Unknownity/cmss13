@@ -123,7 +123,7 @@
 /area/yautja_grounds/temple/entrance/desert
 	ambience_exterior = AMBIENCE_BIGRED
 	ceiling = CEILING_NONE
-	base_lighting_alpha = 50
+	base_lighting_alpha = 10
 
 ///TP Areas/Young blood prep areas
 
@@ -140,7 +140,7 @@
 /area/yautja_grounds/prep_room/desert
 	name = "\improper Desert Moon Campsite"
 	ambience_exterior = AMBIENCE_BIGRED
-	base_lighting_alpha = 50
+	base_lighting_alpha = 10
 
 /area/yautja_grounds/prep_room/desert/interior
 	name ="\improper Desert Moon Campsite Interiors"
