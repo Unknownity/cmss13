@@ -28,6 +28,9 @@
 
 	fire_smothering_strength = 2
 
+/datum/weather_event/sand/infinite
+	length = INFINITY
+
 /datum/weather_event/rock
 	name = "Rockstorm"
 	display_name = "Rockstorm"
